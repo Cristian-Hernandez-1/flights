@@ -1,2 +1,2 @@
-# flights
-comparing flight prices
+# movie and tvshow recommendations
+
