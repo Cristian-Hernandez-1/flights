@@ -44,18 +44,23 @@ def tv_show(platform):
     
 
 mood = input("whats the vibe today movie or tv show?\n")
-platform = input("what streaming platform (Netflix, Hulu, Prime Video, Disney+)\n")
 
-if str(mood.lower()) == "movie":
-    movie_choice = movie(platform)
-    print("Your random movie to watch is " + movie_choice)
-elif str(mood.lower()) == "tv show":
-    tvshow_choice = tv_show(platform)
-    print("Your random tv show to watch is " + tvshow_choice)
+if str(mood.lower()) == "movie" or str(mood.lower()) == "tv show":
+    platform = input("what streaming platform (Netflix, Hulu, Prime Video, Disney+)\n")
 
-else:
-    print("No clue what " + mood + " is? Quit messing with me!")
+    if str(mood.lower()) == "movie":
+        movie_choice = movie(platform)
+        print("Your random movie to watch is: " + '"' + movie_choice + '"')
+
+    elif str(mood.lower()) == "tv show":
+        tvshow_choice = tv_show(platform)
+        print("Your random tv show to watch is: " + '"' + tvshow_choice + '"')
+
+    else:
+        print("I haven't heard of that streaming platform")
+        quit()
+else: 
+    print("I have No clue what " + mood + " is? Quit messing with me!")
     quit()
-
 
  
