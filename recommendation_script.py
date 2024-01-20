@@ -52,15 +52,12 @@ if str(mood.lower()) == "movie" or str(mood.lower()) == "tv show":
         movie_choice = movie(platform)
         print("Your random movie to watch is: " + '"' + movie_choice + '"')
 
-    elif str(mood.lower()) == "tv show":
+    else:
         tvshow_choice = tv_show(platform)
         print("Your random tv show to watch is: " + '"' + tvshow_choice + '"')
 
-    else:
-        print("I haven't heard of that streaming platform")
-        quit()
 else: 
-    print("I have No clue what " + mood + " is? Quit messing with me!")
+    print("I have no clue what " + mood + " is? Quit messing with me!")
     quit()
 
  
